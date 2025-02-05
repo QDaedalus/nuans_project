@@ -3,3 +3,4 @@ djangotutorial/nuans_app/__pycache__/
 djangotutorial/nuans_app/migrations/
 djangotutorial/mysite/__pycache__
 djangotutorial/mysite/settings.py
+.env

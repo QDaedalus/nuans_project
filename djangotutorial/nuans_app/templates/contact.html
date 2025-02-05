@@ -1,21 +1,32 @@
 {% extends "base.html" %}
 {% load static %}
 <head>
+        {% block head %}
+        
+        {% endblock %}
+    <title>Contact - My Website</title>
 </head>
 <body>
     <header>
         {% block header %}
         <h1>Contact Us</h1>
+
         {% endblock %}
     </header>
     <main>
         {% block content %}
         <h2>Contact Information</h2>
-        <p>This page provides contact information.</p>
+        <p>If you have any questions, feel free to reach out to us through the following contact details:</p>
+        <ul>
+            <li><strong>Address:</strong> 123 Main Street, Anytown, USA</li>
+            <li><strong>Phone:</strong> (123) 456-7890</li>
+            <li><strong>Email:</strong> contact@mywebsite.com</li>
+        </ul>
+        <h3>Our Location</h3>
+        
         {% endblock %}
     </main>
     <footer>
     </footer>
 </body>
 </html>
-
