@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+<head>
+</head>
+<body>
+    <header>
+        {% block header %}
+        <h1>Blogs</h1>
+        {% endblock %}
+    </header>
+    <main>
+        <h2>Latest Posts</h2>
+        {% block content %}
+        <article>
+            <h3>Post Title 1</h3>
+            <p>This is a summary of the first blog post.</p>
+        </article>
+        <article>
+            <h3>Post Title 2</h3>
+            <p>This is a summary of the second blog post.</p>
+        </article>
+        </div>
+        {% endblock %}
+        
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>

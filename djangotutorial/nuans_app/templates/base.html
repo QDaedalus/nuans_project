@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuans Psikoloji</title>
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        {% block header %}
+        <h1>Nuans Psikolojis</h1>
+        {% endblock %}
+    </header>
+    <nav>
+        <a href="{% url 'base' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        <a href="{% url 'blogs' %}">Blogs</a>
+    </nav>
+    <main>
+        
+        {% block content %}
+        <h2>About This Website</h2>
+        <p>This is a basic website project that includes an HTML file and a CSS file for styling.</p>
+        {% endblock content %}
+    </main>
+    <footer>
+        <p>© 2024 Tüm Hakları Saklıdır.</p>
+    </footer>
+</body>
+</html>
