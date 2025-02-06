@@ -8,7 +8,8 @@
 
 
 from django.shortcuts import render, get_object_or_404 # type: ignore
-
+from django.conf import settings # type: ignore
+import os
 
 def about(request):
     return render(request, 'about.html')
@@ -19,7 +20,10 @@ def blogs(request):
 
 
 def contact(request):
-    return render(request, 'contact.html')
+    context = {
+        'GOOGLE_MAPS_API_KEY': settings.GOOGLE_MAPS_API_KEY
+    }
+    return render(request, 'contact.html',context)
 
 
 def index(request):

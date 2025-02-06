@@ -2,7 +2,6 @@
 {% load static %}
 <head>
         {% block head %}
-        
         {% endblock %}
     <title>Contact - My Website</title>
 </head>
@@ -23,7 +22,18 @@
             <li><strong>Email:</strong> contact@mywebsite.com</li>
         </ul>
         <h3>Our Location</h3>
-        
+        <p>{{GOOGLE_MAPS_API_KEY}}</p>
+        <p>hello</p>
+        <iframe
+        width="600"
+        height="450"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key={{GOOGLE_MAPS_API_KEY}}&q=Space+Needle,Seattle+WA">
+         
+    </iframe>
         {% endblock %}
     </main>
     <footer>
