@@ -11,8 +11,8 @@ from django.shortcuts import render, get_object_or_404 # type: ignore
 from django.conf import settings # type: ignore
 import os
 
-def about(request):
-    return render(request, 'about.html')
+def hakk(request):
+    return render(request, 'hakk.html')
 
 
 def blogs(request):

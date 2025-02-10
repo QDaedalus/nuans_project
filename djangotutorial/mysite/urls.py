@@ -30,7 +30,7 @@ import nuans_app.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', nuans_app.views.base, name='base'),
-    path('about/', nuans_app.views.about, name='about'),
+    path('hakk/', nuans_app.views.hakk, name='hakk'),
     path('blogs/', nuans_app.views.blogs, name='blogs'),
     path('contact/', nuans_app.views.contact, name='contact'),
     # path('jobs/<int:job_id>', jobs.views.detail, name='detail')

@@ -7,21 +7,35 @@
     <title>Nuans Psikoloji</title>
     <!-- <link rel="stylesheet" href="css/styles.css"> -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="{%static 'images/icon.jpeg'%}">
 </head>
 <body>
     <header>
         {% block header %}
-        <h1>Nuans Psikolojis</h1>
+        <h1>Nuans Psikoloji</h1>
         {% endblock %}
     </header>
     <nav>
-        <a href="{% url 'base' %}">Home</a>
-        <a href="{% url 'about' %}">About</a>
-        <a href="{% url 'contact' %}">Contact</a>
-        <a href="{% url 'blogs' %}">Blogs</a>
+        
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="{% url 'base' %}">Home</a>
+                <a href="{% url 'hakk' %}">About</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'blogs' %}">Blogs</a>
+            </div>
+        </div>
     </nav>
     <main>
-        
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
         {% block content %}
         <h2>About This Website</h2>
         <p>This is a basic website project that includes an HTML file and a CSS file for styling.</p>
@@ -30,5 +44,6 @@
     <footer>
         <p>© 2024 Tüm Hakları Saklıdır.</p>
     </footer>
+    <script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>

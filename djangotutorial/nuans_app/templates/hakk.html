@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+<head>
+</head>
+<body>
+    <header>
+        {% block header %}
+        <h1>Hakkimizda</h1>
+        {% endblock %}
+    <main>
+        {% block content %}
+        <p>Ezgi Burcu Arslantaş tarafından 2023 yılında kurulan Nüans Psikolojik Danışmanlık uzman ekibi ile Tuzlada danışanlarına hizmet vermektedir. İnsanların hayatında psikolojik olarak bir çok zorluk çıkabilmektedir.  Hayatımızda bir yola çıktığımızda bazı detaylar başa çıkmak için zorlayıcı olabiliyor. Hayatınızda istediğiniz yolda olabilmek için Nüansları fark etmeniz ve bu yolda size eşlikçi olabilmek adına Nüans Psikolojik Danışmanlık olarak yanınızdayız.
+            Uzman Klinik Psikolog Ezgi Burcu Arslantaş Nüans Danışmanlık’ta bebek takibi, ebeveyn danışmanlığı ve çocuk-ergen ve yetişkin danışmanlık hizmeti vermektedir.  Nüans psikolojik danışmanlık merkezi olarak; klinik psikologlarımızla çocuklarla oyun terapisi, çift ve aile terapisi, ergen ve yetişkinlere bireysel psikoterapi desteği sağlamaktayız.
+            Bireyin biricik olduğunu benimsediğimiz ve bireysel ihtiyaçları tespit edilerek etik değerler çerçevesinde zihinsel, duygusal ve davranışsal süreçlerini desteklemek amacıyla ekibimizle hizmet vermekteyiz.
+            </p>
+        <div class="image-gallery">
+            <!-- {%static "images/image1.jpg"%} -->
+            <img src="{%static 'images/image1.jpg'%}" alt="Image 1">
+            <img src="{%static 'images/image2.jpg'%}" alt="Image 2">
+            <img src="{%static 'images/image3.jpg'%}" alt="Image 3">
+        </div>
+        {% endblock %}
+
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
