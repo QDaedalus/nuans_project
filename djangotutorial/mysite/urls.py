@@ -32,8 +32,11 @@ urlpatterns = [
     path('', nuans_app.views.base, name='base'),
     path('hakk/', nuans_app.views.hakk, name='hakk'),
     path('blogs/', nuans_app.views.blogs, name='blogs'),
-    path('contact/', nuans_app.views.contact, name='contact'),
+    path('hizmetler/', nuans_app.views.hizmetler, name='hizmetler'),
+    path('iletisim/', nuans_app.views.iletisim, name='iletisim'),
     # path('jobs/<int:job_id>', jobs.views.detail, name='detail')
+    
+    
 ] \
 
 

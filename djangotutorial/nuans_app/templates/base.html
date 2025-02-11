@@ -15,27 +15,39 @@
         <h1>Nuans Psikoloji</h1>
         {% endblock %}
     </header>
-    <nav>
-        
-        <div class="dropdown">
-            <button class="dropbtn">Menu</button>
-            <div class="dropdown-content">
-                <a href="{% url 'base' %}">Home</a>
-                <a href="{% url 'hakk' %}">About</a>
-                <a href="{% url 'contact' %}">Contact</a>
-                <a href="{% url 'blogs' %}">Blogs</a>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
-            <div class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
+
+    <div class="navbar">
+      <a href="{% url 'base' %}">Anasayfa</a>
+        <div class="subnav">
+          <button class="subnavbtn" onclick="location.href='{% url 'hakk' %}'">Hakkimizda<i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="#company">Company</a>
+            <a href="#team">Team</a>
+            <a href="#careers">Careers</a>
           </div>
+        </div> 
+        <div class="subnav">
+          <button class="subnavbtn" onclick="location.href='{% url 'hizmetler' %}'">Hizmetler<i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="#bring">Hizmet 1</a>
+            <a href="#deliver">Hizmet 2</a>
+            <a href="#package">Hizmet 3</a>
+            <a href="#express">Hizmet 4</a>
+          </div>
+        </div> 
+        <div class="subnav">
+          <button class="subnavbtn" onclick="location.href='{% url 'blogs' %}'">Blogs<i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="#link1">Blog 1</a>
+            <a href="#link2">Blog 2</a>
+            <a href="#link3">Blog 3</a>
+            <a href="#link4">Blog 4</a>
+          </div>
+        </div>
+        <a href="{% url 'iletisim' %}">Iletisim</a>
+      </div>
+
+    <main>
         {% block content %}
         <h2>About This Website</h2>
         <p>This is a basic website project that includes an HTML file and a CSS file for styling.</p>

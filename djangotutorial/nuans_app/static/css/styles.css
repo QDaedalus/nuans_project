@@ -21,27 +21,74 @@ ul {
     padding: 0;
   }
 
-nav {
+.navbar {
+    overflow: visible;
     background-color: #444444;
-    color: #fff;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .navbar a {
+    color: white;
     text-align: center;
-}
-
-nav a {
-    color: #fff;
-    margin: 0 10px;
+    padding: 14px 16px;
     text-decoration: none;
-}
+    display: inline-block;
+  }
+  
+  .subnav {
+    position: static;
+  }
+  
+  .subnav .subnavbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .navbar a:hover, 
+  .subnav:hover .subnavbtn {
+    background-color: #333333;
+  }
+  
+  .subnav-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .subnav-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .subnav-content a:hover {
+    background-color: #7d1010;
+    color: white;
+  }
+  
+  .subnav:hover .subnav-content {
+    display: block;
+  }
+  
+  /* Yeni eklenen wrapper için stiller */
+  .nav-wrapper {
+    display: inline-block;
+    position: relative;
+  }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-main {
-    padding: 20px;
-    text-align: center; /* Center the content */
-}
 
 .image-gallery {
     display: flex;
@@ -53,25 +100,6 @@ main {
     margin: 10px 0;
     max-width: 100%;
     height: auto;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-nav a{
-color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    text-decoration: underline;
 }
 
 main {
@@ -150,3 +178,4 @@ footer {
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
