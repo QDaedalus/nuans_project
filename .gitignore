@@ -5,3 +5,4 @@ djangotutorial/mysite/__pycache__
 djangotutorial/mysite/settings.py
 .env
 temp
+test
