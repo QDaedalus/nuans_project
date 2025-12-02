@@ -49,33 +49,56 @@
         <a href="{% url 'iletisim' %}">Iletisim</a>
       </div>
       <div class="circle-icons center">
-        <div class="circle-icon twitter">
-          <i class="fa-brands fa-twitter"></i>
-      </div>
 
-      <div class="circle-icon whatsapp">
-          <a href="https://api.whatsapp.com/send?phone=905389313366" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
+
+        <div class="circle-icon mail">
+          <a href="mailto:example@nuanspsikolojikdanismanlik@gmail.com" target="_blank">
+            <i class="fa-solid fa-envelope"></i>
           </a>
-          
-        
-      </div>
+        </div>
 
-      <div class="circle-icon insta">
-          <i class="fa-brands fa-instagram"></i>
-      </div>
+        <div class="circle-icon whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=905389313366" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+
+        <div class="circle-icon insta">
+          <a href="https://www.instagram.com/nuans.psikoloji/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
 
       <div class="circle-icon phone">
+        <a href="tel:05389313366" target="_blank">
           <i class="fa-solid fa-phone"></i>
+        </a>
       </div>
+
+
     </div>
     <main>
         {% block content %}
-        <h2>About This Website</h2>
-        <p>This is a basic website project that includes an HTML file and a CSS file for styling.</p>
+        <div class="image-anasayfa">
+          <!-- {%static "images/image1.jpg"%} -->
+          <img src="{%static 'images/anasayfa.png'%}" alt="Image 1">
+      </div>
+        <!-- <h2>About This Website</h2>
+        <p>This is a basic website project that includes an HTML file and a CSS file for styling.</p> -->
+        <div class="text-section">
+          <p>Bu, bir metin örneğidir. Daha fazla bilgi için aşağıdaki bağlantıya tıklayın.</p>
+          <a href="{% url 'iletisim' %}" class="text-link">Daha Fazla Bilgi</a>
+        </div>
         {% endblock content %}
     </main>
     <footer>
+        <div class="alt-menu">
+          <a href="{% url 'base' %}">Anasayfa</a>
+          <a href="{% url 'hakk' %}">Hakkimizda</a>
+          <a href="{% url 'hizmetler' %}">Hizmetler</a>
+          <a href="{% url 'blogs' %}">Blogs</a>
+          <a href="{% url 'iletisim' %}">Iletisim</a>
+        </div>
         <p>© 2024 Tüm Hakları Saklıdır.</p>
     </footer>
     <script src="{% static 'js/scripts.js' %}"></script>

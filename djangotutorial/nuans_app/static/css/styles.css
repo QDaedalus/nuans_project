@@ -5,20 +5,44 @@ body {
   background-color: #463e3e52;
 }
 
-header {
-  background-color: #333333;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 h1 {
   margin: 0;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+/*  
+header {
+  background-color: #333333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: sticky;
+}
+*/
+
+/*  
+.navbar {
+  overflow: visible;
+  background-color: #444444;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  position: sticky;
+}
+*/
+
+header {
+  background-color: #333333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar {
@@ -26,8 +50,11 @@ ul {
   background-color: #444444;
   display: flex;
   justify-content: center;
-  position: relative;
+  position: sticky;
+  top: 57px; /* Adjust this value based on your header height */
+  z-index: 999;
 }
+
 
 .navbar a {
   color: white;
@@ -35,6 +62,7 @@ ul {
   padding: 14px 16px;
   text-decoration: none;
   display: inline-block;
+
 }
 
 .subnav {
@@ -103,7 +131,8 @@ ul {
 }
 
 main {
-  padding: 20px;
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
   text-align: center; /* Center the content */
   padding-bottom: 60px; /* Add padding to prevent footer overlap */
 }
@@ -129,10 +158,32 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px 0;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
+/*
+.alt-menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #444444;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.alt-menu a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.alt-menu a:hover {
+  text-decoration: underline;
+}
+*/
+
 
 
 /* w3school example */
@@ -184,7 +235,7 @@ footer {
 /* Circle icons */
 
 
-.circle-icons {
+.circle-icons{
 display: flex;
 flex-direction: column; /* Arrange icons vertically */
 row-gap: 20px; /* Add space between icons */
@@ -195,7 +246,7 @@ transform: translate(-50%, -50%); /* Adjust for exact centering */
 
 }
 
-.circle-icon {
+.circle-icon a{
 color: #fff;
 font-size: 18px;
 outline: 2px solid #fff;
@@ -205,35 +256,37 @@ border-radius: 50%;
 display: inline-flex;
 transition-duration: 0.25s;
 margin: 5px;
+text-decoration: none;
 }
 
 .circle-icon i {
 margin: auto;
 }
 
-.circle-icon:hover {
+.circle-icon a:hover {
 outline-offset: 4px;
 }
 
-.circle-icons .twitter:hover {
+.circle-icons .mail a:hover {
     background-color: dodgerblue;
 }
 
-.circle-icons .whatsapp:hover {
+.circle-icons .whatsapp a:hover {
     background: linear-gradient(45deg, #128c7e, #25d366, #dcf8c6);
 }
 
-.circle-icons .insta:hover {
+.circle-icons .insta a:hover {
     background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
 }
 
-.circle-icons .phone:hover {
+.circle-icons .phone a:hover {
     background-color: black;
 }
 
-.circle-icon:hover i {
+.circle-icon a:hover i {
 animation: shake 0.35s;
 }
+
 
 @keyframes shake {
 10% {
@@ -251,4 +304,49 @@ animation: shake 0.35s;
 40% {
     transform: rotate(-25deg);
 }
+}
+
+
+
+.image-anasayfa {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Stretch the content horizontally */
+  width: 100%; /* Full width */
+  height: 800px; /* Adjust height as needed */
+  margin: 0; /* Remove auto margin */
+  padding: 0; /* Remove padding */
+  overflow: hidden; /* Hide overflow content */
+}
+
+.image-anasayfa img {
+  width: 100%; /* Ensure the image takes the full width of the container */
+  height: 100%; /* Ensure the image takes the full height of the container */
+  object-fit: cover; /* Scale the image to cover the container without cutting it */
+}
+
+.text-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  margin-top: 20px;
+}
+
+.text-section p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.text-link {
+  background-color: #444444;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.text-link:hover {
+  background-color: #3e8e41;
 }
